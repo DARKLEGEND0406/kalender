@@ -4,9 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="kontroll.php" type="text/php">
+  <title>kalender</title>
 </head>
 <body>
+
+
+
+
+  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
+    <label for="date">Ange ett datum:</label>
+    <input type="date" id="date" name="date" required>
+    <input type="submit" value="Kontrollera">
+
+  </form>
+
 
   <?php
 
@@ -86,6 +99,8 @@
   echo "<a href='?date=" . $prev_month . "'>Föregående månad</a> | ";
   echo "<a href='?date=" . $next_month . "'>Nästa månad</a>";
   ?>
+
+  
 
 
 
